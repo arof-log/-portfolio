@@ -59,3 +59,8 @@ const works_swiper = new Swiper('#works_inner', {
 Fancybox.bind("[data-fancybox]", {
   // 옵션 (필요 시)
 });
+
+// 첫 화면 카피는 영상 길이와 관계없이 자연스럽게 노출
+window.addEventListener('load', () => {
+  setTimeout(() => main_inner.classList.add('active'), 700);
+});
