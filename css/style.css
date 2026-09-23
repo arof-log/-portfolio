@@ -84,6 +84,14 @@ header #gnb .btn.active {
   height: 70%;
   position: relative;
 }
+.main-kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: #263f6d;
+  margin-bottom: 18px;
+}
+
 #main #main_inner .title {
   font-family: "GMarketSans";
   font-weight: 700;
@@ -125,7 +133,57 @@ header #gnb .btn.active {
 }
 
 #about {
-  background: #c3ffde;
+  background: #efece5;
+  color: #202020;
+  align-items: stretch;
+}
+#about .about-inner {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 8vw;
+  align-items: center;
+}
+.section-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #8d8174;
+  margin-bottom: 1.4rem;
+}
+#about .about-heading h2 {
+  font-family: "GMarketSans";
+  font-size: clamp(2.5rem, 4.8vw, 5.8rem);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+}
+#about .about-lead {
+  max-width: 640px;
+  font-size: clamp(1.05rem, 1.4vw, 1.4rem);
+  line-height: 1.8;
+  color: #46413b;
+  margin-bottom: 3rem;
+}
+#about .about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid #cfc8be;
+}
+#about .about-block span {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: #9b6957;
+  font-weight: 700;
+}
+#about .about-block p {
+  line-height: 1.8;
+  color: #57514b;
 }
 
 #works {
@@ -275,7 +333,38 @@ header #gnb .btn.active {
 }
 
 #contact {
-  background: #f1ffb4;
+  background: #1f2022;
+  color: #f2efe8;
+  justify-content: flex-start;
+}
+#contact .contact-inner {
+  width: 80%;
+  margin: auto;
+}
+#contact .section-label {
+  color: #a9a39b;
+}
+#contact h2 {
+  font-family: "GMarketSans";
+  font-size: clamp(4rem, 9vw, 9rem);
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+  margin-bottom: 2.5rem;
+}
+#contact .contact-copy {
+  color: #bdb7ae;
+  margin-bottom: 1rem;
+}
+#contact .contact-mail {
+  display: inline-block;
+  font-size: clamp(1.4rem, 2.3vw, 2.5rem);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.25rem;
+}
+#contact .contact-note {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: #76716b;
 }
 
 #wrap .pager {
@@ -329,3 +418,36 @@ header #gnb .btn.active {
 .fancybox__backdrop {
   background: rgba(0, 0, 0, 0.5333333333);
 }/*# sourceMappingURL=style.css.map */
+
+@media (max-width: 900px) {
+  header { padding: 0 18px; }
+  header #gnb ul { gap: 18px; }
+  #main #main_inner { width: calc(100% - 36px); height: 74%; }
+  #main #back { width: 90%; }
+  #main #main_inner .title { font-size: 9vw; }
+  #main #main_inner .sub_line {
+    left: 0;
+    top: auto;
+    bottom: 0;
+    font-size: 0.82rem;
+  }
+  #about .about-inner {
+    width: calc(100% - 36px);
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  #about .about-grid { grid-template-columns: 1fr 1fr; }
+  #works .work-header,
+  #works #works_inner { width: calc(100% - 36px); }
+  #works #works_inner .item { width: 78%; }
+  #works #works_inner { padding: 28px 0; }
+  #contact .contact-inner { width: calc(100% - 36px); }
+}
+
+@media (max-width: 560px) {
+  header #gnb ul { gap: 12px; font-size: 0.8rem; }
+  #about .about-grid { grid-template-columns: 1fr; gap: 1rem; }
+  #about .about-lead { margin-bottom: 1.5rem; }
+  #works .work-header .scroll-guide { display: none; }
+  #works #works_inner .item { width: 86%; }
+}
